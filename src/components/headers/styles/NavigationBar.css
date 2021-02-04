@@ -1,4 +1,22 @@
 .NavigationBar {
-    background-color: blue;
-    padding: 20px;
+    display: flex;
+    background-color: cornflowerblue;
+    border: 1px dotted red;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .navButton {
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .navButton::hover{
+        background-color: lightcoral;
+    }
 }

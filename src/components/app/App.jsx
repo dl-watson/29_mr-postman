@@ -1,10 +1,12 @@
 import React from "react";
 import Home from "../../containers/Home";
 
-export const App = () => {
+const App = () => {
   return (
     <>
       <Home />
     </>
   );
 };
+
+export default App;

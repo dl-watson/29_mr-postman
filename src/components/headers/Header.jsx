@@ -1,5 +1,8 @@
 import React from "react";
+import styles from "./styles/Header";
 
-export const Header = () => {
-  return <div></div>;
+const Header = () => {
+  return <header className={styles.Header}>Header</header>;
 };
+
+export default Header;

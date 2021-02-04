@@ -1,5 +1,7 @@
 # 29_mr-postman
 
+![Wireframe](https://raw.githubusercontent.com/dl-watson/29_mr-postman/dev/public/wireframe.jpg)
+
 **RESTy** is an API Server client application. It's a lot like Postman or httpie, but it runs in the browser.
 
 For this project, you will build a similar application, covering most of the core features (details below).

@@ -1,0 +1,31 @@
+.UserInterface {
+    background-color: white;
+    border: 1px solid red;
+
+    .URLInput {
+        border: 1px solid red;
+        padding: 20px;
+    }
+
+    .radioButtons > form > button {
+        margin: 2px;
+    }
+
+    .textArea {
+        display: block;
+        width: 100%;
+        resize: both;
+        overflow: hidden;
+        min-height: 40px;
+        line-height: 20px;
+        border: 1px solid #ccc;
+        padding: 1px 6px;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    .textArea[contenteditable]:empty::before {
+        content: "Input your JSON here";
+        color: grey;
+    }
+}

@@ -11,18 +11,22 @@ const UserInterface = (props) => {
       </div>
       <div className={styles.radioButtons}>
         <form>
-          <button type="radio" name="get">
+          <label htmlFor="get">
             GET
-          </button>
-          <button type="radio" name="put">
+            <input type="radio" id="get" name="method" />
+          </label>
+          <label htmlFor="put">
             PUT
-          </button>
-          <button type="radio" name="post">
+            <input type="radio" id="put" name="method" />
+          </label>
+          <label htmlFor="post">
             POST
-          </button>
-          <button type="radio" name="delete">
+            <input type="radio" id="post" name="method" />
+          </label>
+          <label htmlFor="delete">
             DELETE
-          </button>
+            <input type="radio" id="delete" name="method" />
+          </label>
         </form>
       </div>
       <div className={styles.JSONInput}>

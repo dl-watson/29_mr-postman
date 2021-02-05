@@ -1,14 +1,32 @@
 .UserInterface {
-    background-color: white;
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
 
     .URLInput {
         border: 1px solid red;
         padding: 20px;
     }
 
-    .radioButtons > form > button {
-        margin: 2px;
+    .URLInput > input {
+        width: 80vw;
+    }
+
+    .URLInput > button {
+        width: 20vh;
+    }
+
+    .radioButtons {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .radioButtons > form > label > input {
+        margin: 5px;
+    }
+
+    .radioButtons > form > label > input[type="radio"]:checked + label{
+        transform: scale(2);
     }
 
     .textArea {

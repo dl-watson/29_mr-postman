@@ -6,13 +6,13 @@ const NavigationBar = () => {
   return (
     <div className={styles.NavigationBar}>
       <Link to="/">
-        <div className={styles.navButton}>Home</div>
+        <div className={styles.navButton}>home</div>
       </Link>
       <Link to="/history">
-        <div className={styles.navButton}>History</div>
+        <div className={styles.navButton}>history</div>
       </Link>
       <Link to="/help">
-        <div className={styles.navButton}>Help</div>
+        <div className={styles.navButton}>help</div>
       </Link>
     </div>
   );

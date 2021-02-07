@@ -14,8 +14,9 @@ const UserInterface = ({ handleChange }) => {
           <label htmlFor="get">
             GET
             <input
-              type="radio"
               id="get"
+              value="get"
+              type="radio"
               name="method"
               onChange={handleChange}
             />
@@ -23,8 +24,9 @@ const UserInterface = ({ handleChange }) => {
           <label htmlFor="put">
             PUT
             <input
-              type="radio"
               id="put"
+              value="put"
+              type="radio"
               name="method"
               onChange={handleChange}
             />
@@ -32,8 +34,9 @@ const UserInterface = ({ handleChange }) => {
           <label htmlFor="post">
             POST
             <input
-              type="radio"
               id="post"
+              value="post"
+              type="radio"
               name="method"
               onChange={handleChange}
             />
@@ -41,10 +44,10 @@ const UserInterface = ({ handleChange }) => {
           <label htmlFor="delete">
             DELETE
             <input
-              type="radio"
-              name="method"
               id="delete"
               value="delete"
+              type="radio"
+              name="method"
               onChange={handleChange}
             />
           </label>

@@ -1,13 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 import UserInterface from "../components/pages/UserInterface";
 import styles from "./styles/Home.css";
 
-const Home = () => {
-  return (
-    <div className={styles.Home}>
-      <UserInterface />
-    </div>
-  );
-};
+export default class Home extends Component {
+  state = {
+    url: "",
+    method: "",
+    JSON: "",
+    result: {},
+  };
 
-export default Home;
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  };
+
+  render() {
+    return (
+      <div className={styles.Home}>
+        <UserInterface />
+      </div>
+    );
+  }
+}

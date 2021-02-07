@@ -1,10 +1,16 @@
 .UserInterface {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    font-family: system-ui;
 
     .URLInput {
-        border: 1px solid red;
         padding: 20px;
+    }
+
+    .URLInput > input, button {
+        border-radius: 12px;
+        height: 30px;
     }
 
     .URLInput > input {
@@ -15,17 +21,29 @@
         width: 20vh;
     }
 
-    .radioButtons {
+    .buttonContainer {
         display: flex;
         align-content: center;
         justify-content: center;
+        flex-direction: column;
     }
 
-    .radioButtons > form > label > input {
+    .JSONInput, .formElement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formElement > label {
+        margin-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    .formElement > label > input {
         margin: 5px;
     }
 
-    .radioButtons > form > label > input[type="radio"]:checked + label{
+    .formElement > label > input[type="radio"]:checked + label{
         transform: scale(2);
     }
 
@@ -43,7 +61,14 @@
     }
 
     .textArea[contenteditable]:empty::before {
-        content: "Input your JSON here";
+        content: "Input raw JSON body";
         color: grey;
+    }
+
+    .results {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
     }
 }

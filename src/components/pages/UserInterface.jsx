@@ -6,11 +6,11 @@ const UserInterface = (props) => {
   return (
     <main className={styles.UserInterface}>
       <div className={styles.URLInput}>
-        <input />
+        <input placeholder="URL to query ..." />
         <button>Go</button>
       </div>
-      <div className={styles.radioButtons}>
-        <form>
+      <div className={styles.buttonContainer}>
+        <form className={styles.formElement}>
           <label htmlFor="get">
             GET
             <input type="radio" id="get" name="method" />
@@ -28,14 +28,17 @@ const UserInterface = (props) => {
             <input type="radio" id="delete" name="method" />
           </label>
         </form>
+        <div className={styles.JSONInput}>
+          <span
+            className={styles.textArea}
+            placeholder="JSON"
+            role="textbox"
+            contentEditable
+          ></span>
+        </div>
       </div>
-      <div className={styles.JSONInput}>
-        <span
-          className={styles.textArea}
-          placeholder="JSON"
-          role="textbox"
-          contentEditable
-        ></span>
+      <div className={styles.results}>
+        <span>Results</span>
       </div>
     </main>
   );

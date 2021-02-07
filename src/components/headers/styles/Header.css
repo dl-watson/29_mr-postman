@@ -6,6 +6,7 @@
 
 .Header {
     background-color: #f15a25;
+    padding-bottom: 20px;
     
     .heading {
         display: flex;

@@ -14,9 +14,16 @@ export default class Home extends Component {
     this.setState({ [target.name]: target.value });
   };
 
+  handleSubmit = (e) => {
+    // when form submits, prevent default
+    e.preventDefault();
+    // grab url, method, and JSON body (if applicable)
+    // then,
+    // setState(result)
+  };
+
   render() {
     const { handleChange } = this;
-    console.log(this.state.method);
     return (
       <div className={styles.Home}>
         <UserInterface handleChange={handleChange} />

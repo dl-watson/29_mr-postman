@@ -15,9 +15,10 @@ export default class Home extends Component {
   };
 
   render() {
+    const { handleChange } = this;
     return (
       <div className={styles.Home}>
-        <UserInterface />
+        <UserInterface handleChange={handleChange} />
       </div>
     );
   }

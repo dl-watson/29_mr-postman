@@ -16,6 +16,7 @@ export default class Home extends Component {
 
   render() {
     const { handleChange } = this;
+    console.log(this.state.method);
     return (
       <div className={styles.Home}>
         <UserInterface handleChange={handleChange} />

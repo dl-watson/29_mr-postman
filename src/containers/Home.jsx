@@ -1,5 +1,7 @@
+/* eslint-disable indent */
 import React, { Component } from "react";
 import UserInterface from "../components/pages/UserInterface";
+import fetchAPI from "../services/fetchAPI";
 import styles from "./styles/Home.css";
 
 export default class Home extends Component {
@@ -7,7 +9,7 @@ export default class Home extends Component {
     url: "",
     method: "",
     JSON: "",
-    result: {},
+    response: "",
   };
 
   handleChange = ({ target }) => {
@@ -15,18 +17,35 @@ export default class Home extends Component {
   };
 
   handleSubmit = (e) => {
-    // when form submits, prevent default
     e.preventDefault();
-    // grab url, method, and JSON body (if applicable)
-    // then,
-    // setState(result)
+    this.handleFetch();
+  };
+
+  handleFetch = () => {
+    const { url, method, JSON } = this.state;
+
+    fetchAPI(url, method, JSON).then(
+      (res) => this.setState({ response: res }),
+      () => {
+        console.log(this.state.response);
+      }
+    );
   };
 
   render() {
-    const { handleChange } = this;
+    const { handleChange, handleSubmit } = this;
+    const { results, method, JSON, response } = this.state;
+    console.log(response);
     return (
       <div className={styles.Home}>
-        <UserInterface handleChange={handleChange} />
+        <UserInterface
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          results={results}
+          method={method}
+          JSON={JSON}
+          response={response}
+        />
       </div>
     );
   }

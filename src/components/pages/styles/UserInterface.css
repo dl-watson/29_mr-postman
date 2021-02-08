@@ -68,12 +68,7 @@
         font-size: inherit;
     }
 
-    .textArea[contenteditable]:empty::before {
-        content: "Input raw JSON body";
-        color: grey;
-    }
-
-    .results {
+    .response {
         display: flex;
         justify-content: center;
         align-items: center;

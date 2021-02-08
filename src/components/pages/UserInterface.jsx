@@ -1,68 +1,82 @@
 import React from "react";
+import Response from "./Response";
 import PropTypes from "prop-types";
 import styles from "./styles/UserInterface.css";
 
-const UserInterface = ({ handleChange }) => {
+const UserInterface = ({
+  handleChange,
+  handleSubmit,
+  url,
+  method,
+  JSON,
+  response,
+}) => {
   return (
     <main className={styles.UserInterface}>
-      <form className={styles.formElement}>
+      <form className={styles.formElement} onSubmit={handleSubmit}>
         <div className={styles.URLInput}>
-          <input placeholder="URL to query ..." />
-          <button>Go</button>
+          <input
+            placeholder="URL to query ..."
+            defaultValue="https://jsonplaceholder.typicode.com/posts"
+            name="url"
+            value={url}
+            onChange={handleChange}
+          />
+          <button type="submit">Go</button>
         </div>
         <div className={styles.buttonContainer}>
           <label htmlFor="get">
             GET
             <input
-              id="get"
-              value="get"
-              type="radio"
               name="method"
+              value="GET"
+              type="radio"
+              checked={method === "GET"}
               onChange={handleChange}
             />
           </label>
           <label htmlFor="put">
             PUT
             <input
-              id="put"
-              value="put"
-              type="radio"
               name="method"
+              value="PUT"
+              type="radio"
+              checked={method === "PUT"}
               onChange={handleChange}
             />
           </label>
           <label htmlFor="post">
             POST
             <input
-              id="post"
-              value="post"
-              type="radio"
               name="method"
+              value="POST"
+              type="radio"
+              checked={method === "POST"}
               onChange={handleChange}
             />
           </label>
           <label htmlFor="delete">
             DELETE
             <input
-              id="delete"
-              value="delete"
-              type="radio"
               name="method"
+              value="DELETE"
+              type="radio"
+              checked={method === "DELETE"}
               onChange={handleChange}
             />
           </label>
         </div>
+        <div className={styles.JSONInput}>
+          <textarea
+            className={styles.textArea}
+            name="json"
+            value={JSON}
+            onChange={handleChange}
+          ></textarea>
+        </div>
       </form>
-      <div className={styles.JSONInput}>
-        <span
-          className={styles.textArea}
-          placeholder="JSON"
-          role="textbox"
-          contentEditable
-        ></span>
-      </div>
-      <div className={styles.results}>
-        <span>Results</span>
+      <div className={styles.response}>
+        <Response response={response} />
       </div>
     </main>
   );
@@ -70,6 +84,18 @@ const UserInterface = ({ handleChange }) => {
 
 UserInterface.propTypes = {
   handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  url: PropTypes.string,
+  method: PropTypes.string,
+  JSON: PropTypes.string,
+  response: PropTypes.arrayOf(
+    PropTypes.shape({
+      body: PropTypes.string,
+      id: PropTypes.number,
+      title: PropTypes.string,
+      userId: PropTypes.number,
+    })
+  ),
 };
 
 export default UserInterface;

@@ -57,9 +57,9 @@
 
     .textArea {
         display: block;
-        width: 100%;
+        width: inherit;
         resize: both;
-        overflow: hidden;
+        overflow: visible;
         min-height: 40px;
         line-height: 20px;
         border: 1px solid #ccc;
@@ -67,6 +67,5 @@
         font-family: inherit;
         font-size: inherit;
     }
-
 
 }

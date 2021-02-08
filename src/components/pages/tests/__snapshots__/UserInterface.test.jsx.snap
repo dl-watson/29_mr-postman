@@ -14,7 +14,7 @@ exports[`UserInterface component renders UserInterface 1`] = `
         <input
           name="url"
           placeholder="URL to query ..."
-          value="https://jsonplaceholder.typicode.com/posts"
+          value=""
         />
         <button
           type="submit"

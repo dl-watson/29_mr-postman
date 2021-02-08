@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import TextAreaAutosize from "react-textarea-autosize";
 import styles from "./styles/UserInterface.css";
 
 const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
@@ -58,11 +59,11 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
           </label>
         </div>
         <div className={styles.JSONInput}>
-          <textarea
+          <TextAreaAutosize
             className={styles.textArea}
             name="json"
             onChange={handleChange}
-          ></textarea>
+          />
         </div>
       </form>
     </main>

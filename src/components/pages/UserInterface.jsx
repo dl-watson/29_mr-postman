@@ -21,6 +21,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
             GET
             <input
               name="method"
+              id="GET"
               value="GET"
               type="radio"
               checked={method === "GET"}
@@ -31,6 +32,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
             PUT
             <input
               name="method"
+              id="PUT"
               value="PUT"
               type="radio"
               checked={method === "PUT"}
@@ -41,6 +43,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
             POST
             <input
               name="method"
+              id="POST"
               value="POST"
               type="radio"
               checked={method === "POST"}
@@ -51,6 +54,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
             DELETE
             <input
               name="method"
+              id="DELETE"
               value="DELETE"
               type="radio"
               checked={method === "DELETE"}

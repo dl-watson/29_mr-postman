@@ -78,6 +78,7 @@ exports[`App component renders App 1`] = `
             >
               GET
               <input
+                id="GET"
                 name="method"
                 type="radio"
                 value="GET"
@@ -88,6 +89,7 @@ exports[`App component renders App 1`] = `
             >
               PUT
               <input
+                id="PUT"
                 name="method"
                 type="radio"
                 value="PUT"
@@ -98,6 +100,7 @@ exports[`App component renders App 1`] = `
             >
               POST
               <input
+                id="POST"
                 name="method"
                 type="radio"
                 value="POST"
@@ -108,6 +111,7 @@ exports[`App component renders App 1`] = `
             >
               DELETE
               <input
+                id="DELETE"
                 name="method"
                 type="radio"
                 value="DELETE"
@@ -125,6 +129,7 @@ exports[`App component renders App 1`] = `
         </form>
       </main>
       <div
+        class="Response"
         data-testid="response-viewer"
       >
         <div

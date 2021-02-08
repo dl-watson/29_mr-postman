@@ -11,7 +11,7 @@
         flex-direction: column;
     }
 
-    .JSONInput, .formElement {
+    .formElement, .URLInput, .JSONInput {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,10 +24,6 @@
 
     .formElement > label > input {
         margin: 5px;
-    }
-
-    .formElement > label > input[type="radio"]:checked + label{
-        transform: scale(2);
     }
 
     .URLInput {

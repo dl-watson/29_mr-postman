@@ -5,8 +5,8 @@ import styles from "./styles/Response.css";
 
 const Response = ({ response }) => {
   return (
-    <div data-testid="response-viewer">
-      <ReactJson className={styles.response} crossorigin src={response} />
+    <div data-testid="response-viewer" className={styles.Response}>
+      <ReactJson crossorigin src={response} />
     </div>
   );
 };

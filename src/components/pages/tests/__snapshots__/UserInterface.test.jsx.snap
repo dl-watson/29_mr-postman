@@ -30,6 +30,7 @@ exports[`UserInterface component renders UserInterface 1`] = `
         >
           GET
           <input
+            id="GET"
             name="method"
             type="radio"
             value="GET"
@@ -40,6 +41,7 @@ exports[`UserInterface component renders UserInterface 1`] = `
         >
           PUT
           <input
+            id="PUT"
             name="method"
             type="radio"
             value="PUT"
@@ -50,6 +52,7 @@ exports[`UserInterface component renders UserInterface 1`] = `
         >
           POST
           <input
+            id="POST"
             name="method"
             type="radio"
             value="POST"
@@ -60,6 +63,7 @@ exports[`UserInterface component renders UserInterface 1`] = `
         >
           DELETE
           <input
+            id="DELETE"
             name="method"
             type="radio"
             value="DELETE"

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInterface component renders UserInterface 1`] = `
+<DocumentFragment>
+  <main
+    class="UserInterface"
+  >
+    <form
+      class="formElement"
+    >
+      <div
+        class="URLInput"
+      >
+        <input
+          name="url"
+          placeholder="URL to query ..."
+          value="https://jsonplaceholder.typicode.com/posts"
+        />
+        <button
+          type="submit"
+        >
+          Go
+        </button>
+      </div>
+      <div
+        class="buttonContainer"
+      >
+        <label
+          for="GET"
+        >
+          GET
+          <input
+            name="method"
+            type="radio"
+            value="GET"
+          />
+        </label>
+        <label
+          for="PUT"
+        >
+          PUT
+          <input
+            name="method"
+            type="radio"
+            value="PUT"
+          />
+        </label>
+        <label
+          for="POST"
+        >
+          POST
+          <input
+            name="method"
+            type="radio"
+            value="POST"
+          />
+        </label>
+        <label
+          for="DELETE"
+        >
+          DELETE
+          <input
+            name="method"
+            type="radio"
+            value="DELETE"
+          />
+        </label>
+      </div>
+      <div
+        class="JSONInput"
+      >
+        <textarea
+          class="textArea"
+          name="json"
+        />
+      </div>
+    </form>
+  </main>
+</DocumentFragment>
+`;

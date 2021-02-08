@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationBar component renders NavigationBar 1`] = `
+<DocumentFragment>
+  <div
+    class="NavigationBar"
+  >
+    <a
+      href="/"
+    >
+      <div
+        class="navButton"
+      >
+        home
+      </div>
+    </a>
+    <a
+      href="/history"
+    >
+      <div
+        class="navButton"
+      >
+        history
+      </div>
+    </a>
+    <a
+      href="/help"
+    >
+      <div
+        class="navButton"
+      >
+        help
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;

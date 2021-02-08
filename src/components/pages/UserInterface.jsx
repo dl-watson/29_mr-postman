@@ -17,7 +17,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
           <button type="submit">Go</button>
         </div>
         <div className={styles.buttonContainer}>
-          <label htmlFor="get">
+          <label htmlFor="GET">
             GET
             <input
               name="method"
@@ -27,7 +27,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="put">
+          <label htmlFor="PUT">
             PUT
             <input
               name="method"
@@ -37,7 +37,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="post">
+          <label htmlFor="POST">
             POST
             <input
               name="method"
@@ -47,7 +47,7 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="delete">
+          <label htmlFor="DELETE">
             DELETE
             <input
               name="method"
@@ -75,7 +75,6 @@ UserInterface.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   url: PropTypes.string,
   method: PropTypes.string,
-  JSON: PropTypes.string,
 };
 
 export default UserInterface;

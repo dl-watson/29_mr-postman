@@ -5,14 +5,14 @@ import styles from "./styles/Response.css";
 
 const Response = ({ response }) => {
   return (
-    <>
+    <div data-testid="response-viewer">
       <ReactJson className={styles.response} crossorigin src={response} />
-    </>
+    </div>
   );
 };
 
 Response.propTypes = {
-  response: PropTypes.array,
+  response: PropTypes.any,
 };
 
 export default Response;

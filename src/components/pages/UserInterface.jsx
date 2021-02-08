@@ -9,7 +9,6 @@ const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
         <div className={styles.URLInput}>
           <input
             placeholder="URL to query ..."
-            defaultValue="https://jsonplaceholder.typicode.com/posts"
             name="url"
             value={url}
             onChange={handleChange}

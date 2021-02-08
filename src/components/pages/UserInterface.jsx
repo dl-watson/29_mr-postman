@@ -1,16 +1,8 @@
 import React from "react";
-import Response from "./Response";
 import PropTypes from "prop-types";
 import styles from "./styles/UserInterface.css";
 
-const UserInterface = ({
-  handleChange,
-  handleSubmit,
-  url,
-  method,
-  JSON,
-  response,
-}) => {
+const UserInterface = ({ handleChange, handleSubmit, url, method }) => {
   return (
     <main className={styles.UserInterface}>
       <form className={styles.formElement} onSubmit={handleSubmit}>
@@ -70,14 +62,10 @@ const UserInterface = ({
           <textarea
             className={styles.textArea}
             name="json"
-            value={JSON}
             onChange={handleChange}
           ></textarea>
         </div>
       </form>
-      <div className={styles.response}>
-        <Response response={response} />
-      </div>
     </main>
   );
 };
@@ -88,14 +76,6 @@ UserInterface.propTypes = {
   url: PropTypes.string,
   method: PropTypes.string,
   JSON: PropTypes.string,
-  response: PropTypes.arrayOf(
-    PropTypes.shape({
-      body: PropTypes.string,
-      id: PropTypes.number,
-      title: PropTypes.string,
-      userId: PropTypes.number,
-    })
-  ),
 };
 
 export default UserInterface;
